@@ -96,7 +96,20 @@ The following measures were created, which will be applied on various part of th
           New hired Men = CALCULATE([New Hire 20],'Pharma Group AG'[Gender]="Male")
   
 - New Hired Women
+  
+          New Hired Women = CALCULATE([New Hire 20],'Pharma Group AG'[Gender]="Female")
+  
 - Newly employed vs Men
+
+          Newly employed vs Men = 
+          var _menemployed=[New hired Men]
+          var _womenemployed=[New Hired Women]
+          var _pctmenemployed=[% New Hired Men]
+          var _pctwomenemployed=[% Women Newly hired]
+          var _sign= IF(_menemployed>_womenemployed, "+", "")
+          return
+          _sign & FORMAT(_pctmenemployed,"#0.0%")&"|"&_sign & FORMAT(_menemployed,"#0,0")
+  
 - Newly employed vs Women
 - Number of Employees
 - Number of Newly hired
