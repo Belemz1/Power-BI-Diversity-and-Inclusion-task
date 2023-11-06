@@ -16,7 +16,7 @@ On previewing the dataset,I divided the task into two categories which are **EMP
 - CREATE MEASURES
 - CREATE MEASURES WITH VARIABLES
 ### CREATING A CALENDER TABLE
-There is need to create a calender table since we have **last hire date** column in our dataset. This table is neccessary to enable us format, and draw out more information on any data realting to date in our dataset.
+There is need to create a calender table since we have **last hire date** column in our dataset. This table is neccessary to enable us format, and draw out more information on any data relating to date in our dataset.
 
         Calender = ADDCOLUMNS(CALENDAR(DATE(1990,1,1),DATE(2050,12,31))
         ,"Year",YEAR([Date])
@@ -34,7 +34,10 @@ There is need to create a calender table since we have **last hire date** column
         ,"Year Quater sort",YEAR([Date])&QUARTER([Date])
         )
 
+The calendar table below was created
 
+![](calendar.JPG)
+From this calendar table, is is worth noting that the **Year month sort** and **Year Quater sort** column were created to help sort the **Year month** and **Year Quater** chronologicaly and not alphabetically during visualization.
 
 
 
