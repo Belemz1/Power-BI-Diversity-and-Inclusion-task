@@ -44,8 +44,17 @@ From this calendar table, is is worth noting that the **Year month sort** and **
 
 The following measures were created, which will be applied on various part of the dashboards for visualization.
 - Average Performance
+  
+          Average Performance = AVERAGE('Backing 1'[PERFORM])
+  
 - Average Performance Men
+ 
+          Average Performance Men = CALCULATE([Average Performance],'Backing 1'[GENDER]="Male")
+  
 - Average Performance Women
+  
+          Average Performance Women = CALCULATE([Average Performance],'Backing 1'[GENDER]="Female")
+  
 - Max Performance
 - % Employee Promoted FY21
 - % Female Promoted
