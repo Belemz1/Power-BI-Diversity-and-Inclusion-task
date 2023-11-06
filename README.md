@@ -111,6 +111,16 @@ The following measures were created, which will be applied on various part of th
           _sign & FORMAT(_pctmenemployed,"#0.0%")&"|"&_sign & FORMAT(_menemployed,"#0,0")
   
 - Newly employed vs Women
+  
+          Newly employed vs Women = 
+          var _menemployed=[New hired Men]
+          var _womenemployed=[New Hired Women]
+          var _pctmenemployed=[% New Hired Men]
+          var _pctwomenemployed=[% Women Newly hired]
+          var _sign = IF(_womenemployed >_menemployed, "+", "")
+          return
+  
+_sign & FORMAT(_pctwomenemployed,"#0.0%")&"|"& _sign & FORMAT(_womenemployed,"#0,0")
 - Number of Employees
 - Number of Newly hired
 - Promoted
