@@ -119,10 +119,16 @@ The following measures were created, which will be applied on various part of th
           var _pctwomenemployed=[% Women Newly hired]
           var _sign = IF(_womenemployed >_menemployed, "+", "")
           return
+          _sign & FORMAT(_pctwomenemployed,"#0.0%")&"|"& _sign & FORMAT(_womenemployed,"#0,0")
   
-_sign & FORMAT(_pctwomenemployed,"#0.0%")&"|"& _sign & FORMAT(_womenemployed,"#0,0")
 - Number of Employees
+  
+          Number of Employees = COUNTROWS('Pharma Group AG')
+  
 - Number of Newly hired
+ 
+          Number of newly hired = FORMAT([New Hire 20],"#0,0")&" "
+  
 - Promoted
 - Promotion vs Men
 - Promotion vs Women
