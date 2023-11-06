@@ -17,21 +17,22 @@ On previewing the dataset,I divided the task into two categories which are **EMP
 - CREATE MEASURES WITH VARIABLES
 ### CREATING A CALENDER TABLE
 There is need to create a calender table since we have **last hire date** column in our dataset. This table is neccessary to enable us format, and draw out more information on any data realting to date in our dataset.
-Calender = ADDCOLUMNS(CALENDAR(DATE(1990,1,1),DATE(2050,12,31))
-,"Year",YEAR([Date])
-,"Quater", QUARTER([Date])
-,"Month num",MONTH([Date])
-,"Week num", WEEKNUM([Date])
-,"Week day", WEEKDAY([Date])
-,"Day", DAY([Date])
-,"Month", FORMAT([Date],"mmmm")
-,"Week",FORMAT([Date],"dddd")
-,"Quater num", "Q" &" "& QUARTER([date])
-,"Year Month",YEAR([Date])&" "&FORMAT([Date],"mmmm")
-,"Year Month sort",YEAR([date])&MONTH([date])
-,"Year Quater", YEAR([date])&" "&"Q"&QUARTER([date])
-,"Year Quater sort",YEAR([Date])&QUARTER([Date])
-)
+
+        Calender = ADDCOLUMNS(CALENDAR(DATE(1990,1,1),DATE(2050,12,31))
+        ,"Year",YEAR([Date])
+        ,"Quater", QUARTER([Date])
+        ,"Month num",MONTH([Date])
+        ,"Week num", WEEKNUM([Date])
+        ,"Week day", WEEKDAY([Date])
+        ,"Day", DAY([Date])
+        ,"Month", FORMAT([Date],"mmmm")
+        ,"Week",FORMAT([Date],"dddd")
+        ,"Quater num", "Q" &" "& QUARTER([date])
+        ,"Year Month",YEAR([Date])&" "&FORMAT([Date],"mmmm")
+        ,"Year Month sort",YEAR([date])&MONTH([date])
+        ,"Year Quater", YEAR([date])&" "&"Q"&QUARTER([date])
+        ,"Year Quater sort",YEAR([Date])&QUARTER([Date])
+        )
 
 
 
