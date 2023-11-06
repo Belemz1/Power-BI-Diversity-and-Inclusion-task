@@ -41,6 +41,7 @@ The calendar table below was created
 From this calendar table, is is worth noting that the **Year month sort** and **Year Quater sort** column were created to help sort the **Year month** and **Year Quater** chronologicaly and not alphabetically during visualization.
 
 ### CREATING MEASURES
+
 The following measures were created, which will be applied on various part of the dashboards for visualization.
 - Average Performance
 - Average Performance Men
