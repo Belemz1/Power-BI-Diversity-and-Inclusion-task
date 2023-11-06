@@ -56,9 +56,19 @@ The following measures were created, which will be applied on various part of th
           Average Performance Women = CALCULATE([Average Performance],'Backing 1'[GENDER]="Female")
   
 - Max Performance
+  
+          Max Performance = CALCULATE(MAX('Backing 1'[PERFORM]))
+  
 - % Employee Promoted FY21
+  
+         % Employee Promoted FY21 = DIVIDE([Promotion Y21],COUNTROWS('Pharma Group AG'),0)
+  
 - % Female Promoted
+  
+         % Female Promoted = DIVIDE([Female promoted],[Promotion Y21],0)
+ 
 - % Male Promoted
+- 
 - % Women Newly hired
 - Female Promoted
 - Male Promoted
@@ -75,6 +85,8 @@ The following measures were created, which will be applied on various part of th
 - Promotion Y21
 - Target
 - Male in Pharma
+- Over target
+- Under target
 
 
 
