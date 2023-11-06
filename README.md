@@ -68,9 +68,21 @@ The following measures were created, which will be applied on various part of th
          % Female Promoted = DIVIDE([Female promoted],[Promotion Y21],0)
  
 - % Male Promoted
-- 
+  
+           % Male Promoted = DIVIDE([Male Promoted],[Promotion Y21],0)
+  
+- % Men Newly hired
+  
+          % New Hired Men = DIVIDE([New hired Men],[New Hire 20],0)
+  
 - % Women Newly hired
+  
+          % Women Newly hired = DIVIDE([New Hired Women],[New Hire 20],0)
+  
 - Female Promoted
+  
+          Female promoted = CALCULATE([Promotion Y21],'Pharma Group AG'[Gender]="Female")
+  
 - Male Promoted
 - Female in Pharma
 - New Hired Men
