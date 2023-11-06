@@ -84,8 +84,17 @@ The following measures were created, which will be applied on various part of th
           Female promoted = CALCULATE([Promotion Y21],'Pharma Group AG'[Gender]="Female")
   
 - Male Promoted
+  
+          Male Promoted = CALCULATE([Promotion Y21],'Pharma Group AG'[Gender]="Male")
+  
 - Female in Pharma
+  
+          Female in Pharma = CALCULATE(COUNTROWS('Pharma Group AG'),FILTER('Pharma Group AG','Pharma Group AG'[Gender]="Female"))
+  
 - New Hired Men
+  
+          New hired Men = CALCULATE([New Hire 20],'Pharma Group AG'[Gender]="Male")
+  
 - New Hired Women
 - Newly employed vs Men
 - Newly employed vs Women
