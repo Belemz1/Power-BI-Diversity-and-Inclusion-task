@@ -130,8 +130,29 @@ The following measures were created, which will be applied on various part of th
           Number of newly hired = FORMAT([New Hire 20],"#0,0")&" "
   
 - Promoted
+- 
+          Promoted = FORMAT([Promotion Y21],"#,0")& " "
+  
 - Promotion vs Men
+  
+          Promotion vs Men = 
+          var _men = [Promotion Y21] - [Female promoted]
+          var _pctmen = [% Male Promoted]
+          var _pctwomen = [% Female Promoted]
+          var _sign = IF(_pctmen > _pctwomen, "+" ,"")
+          return
+          _sign & FORMAT(_pctmen,"#0.0%")& "|"& _sign & FORMAT(_men,"#0,#")
+  
 - Promotion vs Women
+- 
+          Promotion vs Women = 
+          var _women = [Promotion Y21] - [Male Promoted]
+          var _pctwomen = [% Female Promoted]
+          var _pctmen = [% Male Promoted]
+          var _sign = IF(_pctwomen>_pctmen, "+","")
+          return
+          _sign & FORMAT(_pctwomen,"#0.0%") & "|" &_sign & FORMAT(_women,"#0,0")
+  
 - Promotion Y21
 - Target
 - Male in Pharma
