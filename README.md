@@ -15,6 +15,7 @@ On previewing the dataset,I divided the task into two categories which are **EMP
 - CREATING A CALENDER TABLE
 - CREATE MEASURES
 - CREATE MEASURES WITH VARIABLES
+- CREATE FORMATTED MEASURES
 ### CREATING A CALENDER TABLE
 There is need to create a calender table since we have **last hire date** column in our dataset. This table is neccessary to enable us format, and draw out more information on any data relating to date in our dataset.
 
@@ -70,6 +71,10 @@ The following measures were created, which will be applied on various part of th
 - % Male Promoted
   
            % Male Promoted = DIVIDE([Male Promoted],[Promotion Y21],0)
+  
+- Number of Employees
+  
+          Number of Employees = COUNTROWS('Pharma Group AG')
   
 - % Men Newly hired
   
@@ -136,18 +141,8 @@ The variable measure **Newly employed vs Men** and **Newly employed vs Women** i
           var _sign = IF(_womenemployed >_menemployed, "+", "")
           return
           _sign & FORMAT(_pctwomenemployed,"#0.0%")&"|"& _sign & FORMAT(_womenemployed,"#0,0")
-  
-- Number of Employees
-  
-          Number of Employees = COUNTROWS('Pharma Group AG')
-  
-- Number of Newly hired
- 
-          Number of newly hired = FORMAT([New Hire 20],"#0,0")&" "
-  
-- Promoted
-  
-          Promoted = FORMAT([Promotion Y21],"#,0")& " "
+
+  The variable measure **Promotion vs Men** and **Promotion vs Women** which will also be used in the new card visual.DAX code is seen below 
   
 - Promotion vs Men
   
@@ -168,6 +163,18 @@ The variable measure **Newly employed vs Men** and **Newly employed vs Women** i
           var _sign = IF(_pctwomen>_pctmen, "+","")
           return
           _sign & FORMAT(_pctwomen,"#0.0%") & "|" &_sign & FORMAT(_women,"#0,0")
+  
+## CREATING FORMATTED MEASURES
+
+The need to create some formated measure is for use in the new card visual, where the **subtitle** only recognises measures which are formatted to show as 
+
+- Number of Newly hired
+ 
+          Number of newly hired = FORMAT([New Hire 20],"#0,0")&" "
+  
+- Promoted
+  
+          Promoted = FORMAT([Promotion Y21],"#,0")& " "
   
 
 - Target
