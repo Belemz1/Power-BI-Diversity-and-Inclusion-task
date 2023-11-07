@@ -217,6 +217,10 @@ I was able to analyze,visualize and get insights on the following aspect from th
 - 64.7% of men were promoted against 35.3% women
 - Women had a higher average performance of 2.40 against men having 2.35
 - Sales and Marketing category recorded the highest promotion, with 17 men promoted and 2 women promoted
+- The highest number of employee hired was in April 2011, with 423 employee
+- The age group where we have more females and males is 20 to 29, with 103 females and 120 male
+
+
         
 
 
