@@ -79,6 +79,10 @@ The following measures were created, which will be applied on various part of th
   
           % Women Newly hired = DIVIDE([New Hired Women],[New Hire 20],0)
   
+- Promotion Y21
+ 
+          Promotion Y21 = CALCULATE(COUNTROWS('Pharma Group AG'),FILTER('Pharma Group AG','Pharma Group AG'[Promotion in FY21?]="Yes"))
+  
 - Female Promoted
   
           Female promoted = CALCULATE([Promotion Y21],'Pharma Group AG'[Gender]="Female")
@@ -90,6 +94,10 @@ The following measures were created, which will be applied on various part of th
 - Female in Pharma
   
           Female in Pharma = CALCULATE(COUNTROWS('Pharma Group AG'),FILTER('Pharma Group AG','Pharma Group AG'[Gender]="Female"))
+  
+- Newly Hired
+  
+          New Hire 20 = CALCULATE(COUNTROWS('Pharma Group AG'),FILTER('Pharma Group AG','Pharma Group AG'[New hire FY20?]="Y"))
   
 - New Hired Men
   
@@ -144,7 +152,7 @@ The following measures were created, which will be applied on various part of th
           _sign & FORMAT(_pctmen,"#0.0%")& "|"& _sign & FORMAT(_men,"#0,#")
   
 - Promotion vs Women
-- 
+ 
           Promotion vs Women = 
           var _women = [Promotion Y21] - [Male Promoted]
           var _pctwomen = [% Female Promoted]
@@ -153,9 +161,7 @@ The following measures were created, which will be applied on various part of th
           return
           _sign & FORMAT(_pctwomen,"#0.0%") & "|" &_sign & FORMAT(_women,"#0,0")
   
-- Promotion Y21
-- 
-          Promotion Y21 = CALCULATE(COUNTROWS('Pharma Group AG'),FILTER('Pharma Group AG','Pharma Group AG'[Promotion in FY21?]="Yes"))
+
 - Target
   
 - Male in Pharma
@@ -163,13 +169,14 @@ The following measures were created, which will be applied on various part of th
           Male in Pharma = CALCULATE(COUNTROWS('Pharma Group AG'),FILTER('Pharma Group AG','Pharma Group AG'[Gender]="Male"))
   
 - Over target
-- 
+ 
           Over Target = 
           var reqperformance = [Average Performance]
           return
           IF(reqperformance>Target[Target Value],reqperformance-Target[Target Value])
+  
 - Under target
-- 
+  
           Under Target = 
           var reqperformance = [Average Performance]
           return
