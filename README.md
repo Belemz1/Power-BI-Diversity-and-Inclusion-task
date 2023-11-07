@@ -107,6 +107,14 @@ The following measures were created, which will be applied on various part of th
   
           New Hired Women = CALCULATE([New Hire 20],'Pharma Group AG'[Gender]="Female")
   
+ ## CREATING MEASURES WITH VARIABLES 
+ 
+ The need to create measures with varaibles is to achieve the following 
+ - To create visualization were we combine different measure in a card visual to set comparison in number against percentage and format our visual to add signs and colors based on certain conditions
+ - To create a visualization where we set targets and compare the targets against performance
+
+The variable measure **Newly employed vs Men** and **Newly employed vs Women** is created which will be used in the new card visual. The DAX code is seen below
+
 - Newly employed vs Men
 
           Newly employed vs Men = 
