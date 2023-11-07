@@ -201,9 +201,22 @@ Targets are used in analysis to measure performance against several metrics from
           IF(reqperformance < Target[Target Value],Target[Target Value]-reqperformance)
 
 ## DASHBOARD AND VISUALIZATION
-In creating my dashboard, a lot of factors were considered. As mentioned earlier, the analysis is drilled down to two dashboards. **Employee** and **Performance**. The employee dashboard is seen below
+In creating my dashboard, a lot of factors were considered. As mentioned earlier, the analysis is drilled down to two dashboards. **Employee** and **Performance**.While designing the dashboard, i considered color combination, format of my visuals and positioning. The type chart,table, slicer and page navigation were also considered. The employee dashboard which contains employee details is seen below
 
 ![](Diversity_Inclusion1.png)
+
+The Perfrmance dashboard contains cards showing performance, stacked column chart of performance against target for employee based on function and employee based on grade,table and slicers. THe performance dashboard is seen below
+
+![](Diversity_Inclusion2.png)
+
+## CONCLUSION
+
+I was able to analyze,visualize and get insights on the following aspect from the data
+- 51.5% of women were newly employed against 48.5% men
+- 10.2% of the total employee were promoted
+- 64.7% of men were promoted against 35.3% women
+- Women had a higher average performance of 2.40 against men having 2.35
+- Sales and Marketing category recorded the highest promotion, with 17 men promoted and 2 women promoted
         
 
 
