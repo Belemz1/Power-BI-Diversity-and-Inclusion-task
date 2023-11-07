@@ -16,6 +16,7 @@ On previewing the dataset,I divided the task into two categories which are **EMP
 - CREATE MEASURES
 - CREATE MEASURES WITH VARIABLES
 - CREATE FORMATTED MEASURES
+- TARGETS
 ### CREATING A CALENDER TABLE
 There is need to create a calender table since we have **last hire date** column in our dataset. This table is neccessary to enable us format, and draw out more information on any data relating to date in our dataset.
 
@@ -166,7 +167,7 @@ The variable measure **Newly employed vs Men** and **Newly employed vs Women** i
   
 ## CREATING FORMATTED MEASURES
 
-The need to create some formated measure is for use in the new card visual, where the **subtitle** only recognises measures which are formatted to show as 
+The need to create some formated measure is for use in the new card visual, where the **subtitle** value can be inputed through the **conditional formatted** field, which only recognises measures or values. Hence, some of the measures that needs to be displayed in the subtitle needs to be formatted  
 
 - Number of Newly hired
  
@@ -177,7 +178,8 @@ The need to create some formated measure is for use in the new card visual, wher
           Promoted = FORMAT([Promotion Y21],"#,0")& " "
   
 
-- Target
+## TARGETS
+Targets are used in analysis to measure performance against several metrics from a data. In this analysis, i had to set a target using the average performance as a benchmark against performance of the employees. This target value can also be adjusted when placed as a slicer. To set target value go to Modeling/New Parameter/Numeric Range. The set the values
   
 - Male in Pharma
   
