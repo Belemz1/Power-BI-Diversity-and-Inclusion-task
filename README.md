@@ -200,10 +200,10 @@ Targets are used in analysis to measure performance against several metrics from
           return
           IF(reqperformance < Target[Target Value],Target[Target Value]-reqperformance)
 
-  ## DASHBOARD AND VISUALIZATION
-  In creating my dashboard, a lot of factors were considered. As mentioned earlier, the analysis is drilled down to two dashboards. **Employee** and **Performance**. The employee dashboard is seen below
+## DASHBOARD AND VISUALIZATION
+In creating my dashboard, a lot of factors were considered. As mentioned earlier, the analysis is drilled down to two dashboards. **Employee** and **Performance**. The employee dashboard is seen below
 
-  ![](Diversity_Inclusion1.png)
+![](Diversity_Inclusion1.png)
         
 
 
