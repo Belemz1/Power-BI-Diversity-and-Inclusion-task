@@ -93,6 +93,11 @@ The following measures were created, which will be applied on various part of th
   
           Female promoted = CALCULATE([Promotion Y21],'Pharma Group AG'[Gender]="Female")
   
+  - Male in Pharma
+  
+          Male in Pharma = CALCULATE(COUNTROWS('Pharma Group AG'),FILTER('Pharma Group AG','Pharma Group AG'[Gender]="Male"))
+  
+  
 - Male Promoted
   
           Male Promoted = CALCULATE([Promotion Y21],'Pharma Group AG'[Gender]="Male")
@@ -113,7 +118,7 @@ The following measures were created, which will be applied on various part of th
   
           New Hired Women = CALCULATE([New Hire 20],'Pharma Group AG'[Gender]="Female")
   
- ## CREATING MEASURES WITH VARIABLES 
+ ### CREATING MEASURES WITH VARIABLES 
  
  The need to create measures with varaibles is to achieve the following 
  - To create visualization were we combine different measure in a card visual to set comparison in number against percentage and format our visual to add signs and colors based on certain conditions
@@ -165,7 +170,7 @@ The variable measure **Newly employed vs Men** and **Newly employed vs Women** i
           return
           _sign & FORMAT(_pctwomen,"#0.0%") & "|" &_sign & FORMAT(_women,"#0,0")
   
-## CREATING FORMATTED MEASURES
+### CREATING FORMATTED MEASURES
 
 The need to create some formated measure is for use in the new card visual, where the **subtitle** value can be inputed through the **conditional formatted** field, which only recognises measures or values. Hence, some of the measures that needs to be displayed in the subtitle needs to be formatted  
 
@@ -178,12 +183,8 @@ The need to create some formated measure is for use in the new card visual, wher
           Promoted = FORMAT([Promotion Y21],"#,0")& " "
   
 
-## TARGETS
-Targets are used in analysis to measure performance against several metrics from a data. In this analysis, i had to set a target using the average performance as a benchmark against performance of the employees. This target value can also be adjusted when placed as a slicer. To set target value go to Modeling/New Parameter/Numeric Range. The set the values
-  
-- Male in Pharma
-  
-          Male in Pharma = CALCULATE(COUNTROWS('Pharma Group AG'),FILTER('Pharma Group AG','Pharma Group AG'[Gender]="Male"))
+### TARGETS
+Targets are used in analysis to measure performance against several metrics from a data. In this analysis, i had to set a target using the average performance as a benchmark against performance of the employees. This target value can also be adjusted when placed as a slicer. To set target value go to Modeling/New Parameter/Numeric Range. Then set the values. Further we set variable measure for **Over target** and **Under target** condition.
   
 - Over target
  
@@ -198,6 +199,11 @@ Targets are used in analysis to measure performance against several metrics from
           var reqperformance = [Average Performance]
           return
           IF(reqperformance < Target[Target Value],Target[Target Value]-reqperformance)
+
+  ## DASHBOARD AND VISUALIZATION
+  In creating my dashboard, a lot of factors were considered. As mentioned earlier, the analysis is drilled down to two dashboards. **Employee** and **Performance**. The employee dashboard is seen below
+
+  ![](Diversity_Inclusion1.png)
         
 
 
