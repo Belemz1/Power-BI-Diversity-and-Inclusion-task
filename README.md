@@ -130,7 +130,7 @@ The following measures were created, which will be applied on various part of th
           Number of newly hired = FORMAT([New Hire 20],"#0,0")&" "
   
 - Promoted
-- 
+  
           Promoted = FORMAT([Promotion Y21],"#,0")& " "
   
 - Promotion vs Men
@@ -154,10 +154,26 @@ The following measures were created, which will be applied on various part of th
           _sign & FORMAT(_pctwomen,"#0.0%") & "|" &_sign & FORMAT(_women,"#0,0")
   
 - Promotion Y21
+- 
+          Promotion Y21 = CALCULATE(COUNTROWS('Pharma Group AG'),FILTER('Pharma Group AG','Pharma Group AG'[Promotion in FY21?]="Yes"))
 - Target
+  
 - Male in Pharma
+  
+          Male in Pharma = CALCULATE(COUNTROWS('Pharma Group AG'),FILTER('Pharma Group AG','Pharma Group AG'[Gender]="Male"))
+  
 - Over target
+- 
+          Over Target = 
+          var reqperformance = [Average Performance]
+          return
+          IF(reqperformance>Target[Target Value],reqperformance-Target[Target Value])
 - Under target
-
+- 
+          Under Target = 
+          var reqperformance = [Average Performance]
+          return
+          IF(reqperformance < Target[Target Value],Target[Target Value]-reqperformance)
+        
 
 
